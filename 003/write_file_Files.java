@@ -1,33 +1,19 @@
-// Title: Write a file using C functions (fopen, fclose, fprintf, etc.).
+// Title: Write a file using the Java Files class
 // File: write_file_Files.java
 
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 public class write_file_Files  {
-    public static void main(String[] args)  {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
+    public static void main( String[] args ) throws IOException  {
+        String str = "Now is the time for all good people to come to the aid of their country.\n\n";
+
+        Path path = Paths.get( "example_out_003_Files.txt" );
+        byte[] strToBytes = str.getBytes();
+
+        Files.write( path, strToBytes );
     }
 }
 
-
-
-
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int main()  {
-   char const * const outfile_name = "example_out_002.txt";
-
-   FILE* outfile_p = fopen( outfile_name, "w" );
-   if( nullptr == outfile_p )  {
-       fprintf( stderr, "Unable to open file %s.\n\n", outfile_name );
-       exit( 1 );
-   }
-   fprintf( outfile_p, "Now is the time for all good "
-      "people to come to the aid of their country.\n\n" );
-   fclose( outfile_p );
-
-   exit( 0 );
-}
-*/
