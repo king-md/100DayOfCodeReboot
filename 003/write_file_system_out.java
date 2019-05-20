@@ -1,33 +1,15 @@
-// Title: Write a file using C functions (fopen, fclose, fprintf, etc.).
+// Title: Write a file using Java's System.out (the most basic file writing).
 // File: write_file_system_out.java
 
+import java.io.*;
 
 public class write_file_system_out  {
-    public static void main(String[] args)  {
-        // Prints "Hello, World" to the terminal window.
-        System.out.println("Hello, World");
+    public static void main(String[] args) throws IOException  {
+        PrintStream consoleOut = System.out;
+        PrintStream fps = new PrintStream( new File( "example_out_003_system_out.txt" ) );
+        System.setOut( fps );
+
+        System.out.println( "Now is the time for all good people to come to the aid of their country." );
     }
 }
 
-
-
-
-/*
-#include <stdlib.h>
-#include <stdio.h>
-
-int main()  {
-   char const * const outfile_name = "example_out_002.txt";
-
-   FILE* outfile_p = fopen( outfile_name, "w" );
-   if( nullptr == outfile_p )  {
-       fprintf( stderr, "Unable to open file %s.\n\n", outfile_name );
-       exit( 1 );
-   }
-   fprintf( outfile_p, "Now is the time for all good "
-      "people to come to the aid of their country.\n\n" );
-   fclose( outfile_p );
-
-   exit( 0 );
-}
-*/
