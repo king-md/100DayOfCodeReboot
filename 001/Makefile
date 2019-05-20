@@ -23,4 +23,4 @@ clean:
 	rm -f $(MYPROGRAM)
 
 clobber:
-	rm -f $(MYPROGRAM) *.o
+	rm -f $(MYPROGRAM) *.o example_out_001.txt

@@ -71,4 +71,5 @@ clean:
 	rm -f write_file_BufferedWriter.class write_file_DataOutputStream.class write_file_FileChannel.class write_file_FileOutputStream.class write_file_Files.class write_file_LockFileBeforeWriting.class write_file_PrintWriter.class write_file_RandomAccessFile.class write_file_system_out.class write_file_TemporaryFile.class
 
 clobber: clean
+	rm -f write_file_BufferedWriter.txt example_out_003_DataOutputStream.txt example_out_003_FileChannel.txt example_out_003_FileOutputStream.txt example_out_003_Files.txt example_out_003_LockFileBeforeWriting.txt example_out_003_PrintWriter.txt example_out_003_RandomAccessFile.txt example_out_003_system_out.txt example_out_003_TemporaryFile.txt
 
